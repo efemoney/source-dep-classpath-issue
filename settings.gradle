@@ -1,0 +1,11 @@
+rootProject.name = 'source-dep-classpath-issue'
+
+sourceControl {
+    gitRepository("injected-repo/") {
+        producesModule("injected.plugin.group:an-artifact")
+        plugins {
+            id "utilities-build"
+        }
+    }
+}
+

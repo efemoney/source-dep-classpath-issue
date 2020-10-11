@@ -1,0 +1,19 @@
+plugins {
+    id 'java'
+    id 'java-gradle-plugin'
+}
+
+sourceSets.main.java.srcDir("src")
+
+gradlePLugin {
+    create("aPlugin") {
+        id "injected-plugin"
+        implementationClass "InjectedPlugin"
+    }
+}
+
+repositories.mavenCentral()
+
+dependencies {
+
+}
